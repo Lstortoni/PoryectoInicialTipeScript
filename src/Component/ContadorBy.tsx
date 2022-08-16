@@ -5,7 +5,7 @@ interface Props {
 
    initialValue?:number
 }
-
+ 
 const ContadorBy = ({initialValue=10}:Props) => {
   
          const[Estadocontador,setEstadoContador] = React.useState({
