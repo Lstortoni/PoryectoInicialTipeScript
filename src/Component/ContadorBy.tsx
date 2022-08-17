@@ -5,25 +5,29 @@ interface Props {
 
    initialValue?:number
 }
- 
+
+interface EstadoContador{
+   contador: number,
+   clicks: number,
+}
 const ContadorBy = ({initialValue=10}:Props) => {
   
-         const[Estadocontador,setEstadoContador] = React.useState({
+         const[EstadoContador,setEstadoContador] = React.useState<EstadoContador>({
             contador:initialValue,
             clicks:0,
 
          })   
 
-      const {contador,clicks} = Estadocontador;
+      const {contador,clicks} = EstadoContador;
 
     //initialValue es de tipo Counter por consecuencia contador es de tipo counter
      
     const handleClick= (value:number)=>{
 
-        setEstadoContador(prev=>(
+        setEstadoContador(({clicks,contador})=>(
         {
-          contador: prev.contador + value,
-          clicks : prev.clicks +1
+          contador: contador + value,
+          clicks : clicks +1
         }
 
         )

@@ -4,10 +4,12 @@ interface Props {
 
    initialValue?:number
 }
+type contador =number;
+
 
 const Contador = ({initialValue=0}:Props) => {
   
-    const[contador,setContador] = React.useState(initialValue)
+    const[contador,setContador] = React.useState<contador>(initialValue)
      
     const handleClick= ()=>{
 
