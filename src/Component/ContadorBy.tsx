@@ -16,7 +16,7 @@ const ContadorBy = ({initialValue=10}:Props) => {
             contador:initialValue,
             clicks:0,
 
-         })   
+         })    
 
       const {contador,clicks} = EstadoContador;
 
